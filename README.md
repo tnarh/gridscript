@@ -18,3 +18,18 @@ Clears the content of the cell (0,0) `clr [0] [0]`
 Creates a new variable.
 ### Syntax
 Creates a variable with the name "row" and sets it to 0 `var row [0]`
+
+## add
+Adds a number to a variable.
+### Syntax
+Adds 2 to the variable "num" `add num [2]`
+
+## add
+Adds a number to a variable.
+### Syntax
+Adds 2 to the variable "num" `add num [2]`
+
+## prn
+Prints text.
+### Syntax
+Prints "the number is" then the value of the variable "num" `prn [the number is] [$num]`
