@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+    margin: 0;
+}
+
+* {
+    background-color: #111111;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.cells::-webkit-scrollbar {
+    width: 10px;
+}
+
+.cells::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.cells::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.cells {
+    scrollbar-width: thin;
+    scrollbar-color: #f1f1f1 #888;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    height: 100vh;
+}
+
+.cells {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.cells-input {
+    width: calc(100% - 2px);
+    border: 1px solid #555555;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 5px;
+    color: white;
+    font-size: 1.6vh;
+}
+
+
+#cellTable {
+    border-collapse: collapse;
+    width: 90vw;
+    overflow-x: auto;
+}
+
+#cellTable td {
+    border: none;
+}
+
+.scroll-bar {
+    padding: 10px;
+    border: none;
+}
+
+.code-section {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #555555;
+    border-left: 1px solid #cccccc;
+    height: 65.5vh;
+}
+
+.buttons > button {
+    padding: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 50%;
+    margin: 0;
+    float: left;
+    display: inline;
+}
+
+.run-button {
+    background-color: #4CAF50;
+}
+
+.reset-button {
+    background-color: blue;
+}
+
+textarea {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #555555;
+    resize: none;
+    color: white;
+    font-size: 1.75vh;
+}
+
+.output-section {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    padding: 10px;
+    border-left: 1px solid #cccccc;
+    height: 30vh;
+}
+
+.output {
+    border: 1px solid #555555;
+    padding: 10px;
+    height: 100%;
+    color: white;
+    font-size: 1.75vh;
+}
+
+.system {
+    color: gray;
+}
